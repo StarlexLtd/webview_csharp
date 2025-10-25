@@ -174,6 +174,15 @@ namespace SharpWebview
         }
 
         /// <summary>
+        /// Get the native window of the webview.
+        /// </summary>
+        /// <returns>Native window handle.</returns>
+        public IntPtr GetWindow()
+        {
+            return Bindings.webview_get_window(_nativeWebview);
+        }
+
+        /// <summary>
         /// Disposes the current webview.
         /// </summary>
         public void Dispose()
